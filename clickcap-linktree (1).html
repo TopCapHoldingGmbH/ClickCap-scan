@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Click Cap</title>
+  <meta name="description" content="The Click Cap – resealable closure for aluminium cans." />
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --gold: #C8A84B;
+      --bg: #080807;
+      --surface: #111110;
+      --surface-hover: #18180f;
+      --border: rgba(200,168,75,0.18);
+      --border-hover: rgba(200,168,75,0.5);
+      --text: #F2EDE4;
+      --muted: #7A7468;
+    }
+    html, body { min-height: 100%; background: var(--bg); font-family: 'DM Sans', sans-serif; color: var(--text); -webkit-font-smoothing: antialiased; }
+    body { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; padding: 3rem 1.25rem; position: relative; }
+    body::before { content: ''; position: fixed; inset: 0; background: radial-gradient(ellipse 60% 40% at 50% 0%, rgba(200,168,75,0.06) 0%, transparent 70%); pointer-events: none; }
+    .container { position: relative; width: 100%; max-width: 400px; display: flex; flex-direction: column; align-items: center; }
+    .logo-ring { width: 76px; height: 76px; border-radius: 50%; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; background: var(--surface); margin-bottom: 1.5rem; animation: fadeDown 0.5s ease both; }
+    .logo-inner { width: 54px; height: 54px; border-radius: 50%; background: rgba(200,168,75,0.1); border: 1px solid var(--gold); display: flex; align-items: center; justify-content: center; }
+    .brand { font-family: 'DM Serif Display', serif; font-size: 26px; font-weight: 400; text-align: center; margin-bottom: 6px; animation: fadeDown 0.5s 0.08s ease both; }
+    .tagline { font-size: 12px; font-weight: 300; color: var(--muted); text-align: center; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 2.5rem; animation: fadeDown 0.5s 0.14s ease both; }
+    .links { width: 100%; display: flex; flex-direction: column; gap: 10px; }
+    .link-card { display: flex; align-items: center; gap: 14px; padding: 15px 18px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; text-decoration: none; color: var(--text); transition: background 0.2s, border-color 0.2s, transform 0.15s; animation: fadeUp 0.5s ease both; }
+    .link-card:nth-child(1) { animation-delay: 0.22s; }
+    .link-card:nth-child(2) { animation-delay: 0.30s; }
+    .link-card:nth-child(3) { animation-delay: 0.38s; }
+    .link-card:hover { background: var(--surface-hover); border-color: var(--border-hover); transform: translateY(-1px); }
+    .link-card:active { transform: scale(0.98); }
+    .icon-wrap { width: 42px; height: 42px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; border: 1px solid rgba(255,255,255,0.06); }
+    .icon-wrap.video { background: rgba(200,168,75,0.1); }
+    .icon-wrap.web   { background: rgba(80,200,120,0.08); }
+    .icon-wrap.li    { background: rgba(60,130,200,0.1); }
+    .icon-wrap svg   { width: 18px; height: 18px; }
+    .link-text { flex: 1; }
+    .link-title { font-size: 15px; font-weight: 500; margin-bottom: 2px; }
+    .link-sub { font-size: 12px; font-weight: 300; color: var(--muted); }
+    .link-arrow { color: var(--muted); font-size: 18px; transition: color 0.2s, transform 0.2s; }
+    .link-card:hover .link-arrow { color: var(--gold); transform: translateX(2px); }
+    .footer { margin-top: 2.5rem; font-size: 11px; font-weight: 300; color: var(--muted); text-align: center; letter-spacing: 0.05em; animation: fadeIn 0.5s 0.5s ease both; }
+    @keyframes fadeDown { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeUp   { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeIn   { from { opacity: 0; } to { opacity: 1; } }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="logo-ring">
+      <div class="logo-inner">
+        <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="7" y="12" width="14" height="12" rx="2" fill="none" stroke="#C8A84B" stroke-width="1.5"/>
+          <rect x="5" y="9" width="18" height="4" rx="1.5" fill="#C8A84B"/>
+          <line x1="10" y1="9" x2="10" y2="6" stroke="#C8A84B" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="14" y1="9" x2="14" y2="5" stroke="#C8A84B" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="18" y1="9" x2="18" y2="6" stroke="#C8A84B" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+
+    <h1 class="brand">The Click Cap</h1>
+    <p class="tagline">Resealable · Recyclable · Revolutionary</p>
+
+    <div class="links">
+
+      <a class="link-card" href="https://vimeo.com/1180810005" target="_blank" rel="noopener noreferrer">
+        <div class="icon-wrap video">
+          <svg viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="9" stroke="#C8A84B" stroke-width="1.5"/>
+            <polygon points="10,8.5 17,12 10,15.5" fill="#C8A84B"/>
+          </svg>
+        </div>
+        <div class="link-text">
+          <div class="link-title">Opening sequence</div>
+          <div class="link-sub">Watch the Click Cap in action</div>
+        </div>
+        <span class="link-arrow">›</span>
+      </a>
+
+      <a class="link-card" href="https://theclickcap.com" target="_blank" rel="noopener noreferrer">
+        <div class="icon-wrap web">
+          <svg viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="9" stroke="#50C878" stroke-width="1.5"/>
+            <ellipse cx="12" cy="12" rx="3.5" ry="9" stroke="#50C878" stroke-width="1.2"/>
+            <line x1="3.5" y1="12" x2="20.5" y2="12" stroke="#50C878" stroke-width="1.2"/>
+            <line x1="5" y1="7.5" x2="19" y2="7.5" stroke="#50C878" stroke-width="0.8" opacity="0.5"/>
+            <line x1="5" y1="16.5" x2="19" y2="16.5" stroke="#50C878" stroke-width="0.8" opacity="0.5"/>
+          </svg>
+        </div>
+        <div class="link-text">
+          <div class="link-title">Our website</div>
+          <div class="link-sub">theclickcap.com</div>
+        </div>
+        <span class="link-arrow">›</span>
+      </a>
+
+      <a class="link-card" href="https://www.linkedin.com/company/the-click-cap/" target="_blank" rel="noopener noreferrer">
+        <div class="icon-wrap li">
+          <svg viewBox="0 0 24 24" fill="none">
+            <rect x="2.5" y="2.5" width="19" height="19" rx="3.5" stroke="#3C82C8" stroke-width="1.5"/>
+            <rect x="6" y="10" width="2.5" height="7.5" fill="#3C82C8"/>
+            <circle cx="7.25" cy="7.25" r="1.5" fill="#3C82C8"/>
+            <path d="M11 10h2.5v1.2c.5-.9 1.5-1.4 2.5-1.4 2 0 2.7 1.4 2.7 3.4V17.5h-2.5v-4c0-.9-.4-1.8-1.4-1.8s-1.5.9-1.5 1.8v4H11V10z" fill="#3C82C8"/>
+          </svg>
+        </div>
+        <div class="link-text">
+          <div class="link-title">Follow us on LinkedIn</div>
+          <div class="link-sub">The Click Cap · Top Cap Holding GmbH</div>
+        </div>
+        <span class="link-arrow">›</span>
+      </a>
+
+    </div>
+
+    <p class="footer">Top Cap Holding GmbH · Kufstein, Austria</p>
+
+  </div>
+</body>
+</html>
